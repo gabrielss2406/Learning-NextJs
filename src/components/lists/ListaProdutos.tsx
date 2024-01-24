@@ -1,5 +1,5 @@
-import Produto from "@/model/Produto"
-import ProdutoItem from "./ProdutoItem"
+import Produto from '@/model/Produto'
+import ProdutoItem from './ProdutoItem'
 
 interface ListaProdutosProps {
     produtos: Produto[]
@@ -8,9 +8,9 @@ interface ListaProdutosProps {
 
 export default function ListaProdutos(props: ListaProdutosProps) {
     return (
-        <div className="flex flex-wrap gap-5">
-            {props.produtos.map(produto => {
-                return  <ProdutoItem key={produto.id} produto={produto} comprar={props.comprar}/>
+        <div className='flex justify-center flex-wrap gap-5'>
+            {props.produtos.map((produto) => {
+                return <ProdutoItem key={produto.id} produto={produto} comprar={props.comprar} />
             })}
         </div>
     )
